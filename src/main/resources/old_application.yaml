@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: demo-park-api
+
+  # LOCALE CONFIG
+  # web:
+  #   locale-resolver: fixed
+  #   locale: pt_PT
+
+  # PROPRIEDADES DE CONEXÃO DO BANCO DE DADOS MySQL
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo_park?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Portugal
+    username: root
+    password: root
+
+  # PROPRIEDADES JPA
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: false
+    hibernate:
+      ddl-auto: update
+
+  # PROPRIEDADES SWAGGER
+  springdoc:
+    swagger-ui:
+      path: /docs-park.html

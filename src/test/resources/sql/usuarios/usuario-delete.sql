@@ -1,0 +1,1 @@
+TRUNCATE TABLE demo_park_test.usuarios;
