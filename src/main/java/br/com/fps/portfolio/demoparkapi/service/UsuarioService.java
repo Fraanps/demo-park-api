@@ -49,7 +49,7 @@ public class UsuarioService {
   public String editarSenha(Long id, String senhaAtual, String novaSenha, String confirmaSenha) {
     // validação de nova senha
     if (!novaSenha.equals(confirmaSenha)) {
-      throw new RuntimeException((ERRO_CONFIRMACAO_DE_SENHA));
+      throw new PasswordInvalidException((ERRO_CONFIRMACAO_DE_SENHA));
     }
 
     // validação se senha atual
